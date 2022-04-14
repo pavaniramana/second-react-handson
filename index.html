@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h1 style="color: red">LIFE-CYCLE METHODS:-</h1>
+        <P>LIFE CYCLE are used in class component only.</P>
+        <p>In LIFE-CYCLE methods are classified into three types</p>
+        <ol>
+            <li>Mounting</li>
+            <li>Updating</li>
+            <li>Unmounting</li>
+        </ol>
+    </div>
+    <div>
+        <h2 style="color: blueviolet">MOUNTING:- <span>When an instance of a component is being created and inserted into the DOM</span> </h2>
+        <P>Mounting is classified into four methods</P>
+        <ol type="a">
+            <li>Constructor:- 
+                <span>
+                    <ul>
+                        <li>A special type of function that will get called whenever a new component is created.</li>
+                        <li>Used to initialize states & Binding events.</li>
+                        <li>super():-    it is used to call the constructor of it's parent class.</li>
+                        <li>Not perform,http req.</li>
+                    </ul>
+                </span>
+            </li>
+            <li>
+                static getDerivedStatesFromProps:-(rarely used )
+                <span>
+                    <ul>
+                        <li>When the state of component depends on change in props.</li>
+                        <li>set the state.</li>
+                        <li>Not perform,http req.</li>
+                    </ul>
+                </span>
+            </li>
+            <li>
+                render:-
+                <span>
+                    <ul>
+                        <li>Invoked immediately after a component and it's child components have been rendered to DOM</li>
+                        <li>Not perform,http req</li>
+                    </ul>
+                </span>
+            </li>
+            <li>
+                componentDidMount:-
+                <span>
+                    <ul>
+                        <li>Invoked immediately after a component and it's child components have been rendered to DOM</li>
+                        <li>perform any AJAX call to load data.</li>
+                    </ul>
+                </span>
+            </li>
+        </ol>
+    </div>
+    <div>
+        <h2 style="color: blueviolet;">UPDATING:- <span>When a component is being re-render as a result of changes to either it's props or state.</span> </h2>
+        <P>Updating is classified into five methods</P>
+        <ol type="a">
+            <li>static getDerivedStateFromProps :-
+                <span>
+                    <ul>
+                        <li>method is called every time a component is re-rendered.</li>
+                        <li>set the state.</li>
+                    </ul>
+                </span>
+            </li>
+            <li>sholudComponentUpdate :-
+                <span>
+                    <ul>
+                        <li>Dictates if the component should re-render or not.</li>
+                        <li>Performance Optimization.</li>
+                        <li>Not perform,http req</li>
+                    </ul>
+                </span>
+            </li>
+            <li>
+                render:-
+                <span>
+                    <ul>
+                        <li>Invoked immediately after a component and it's child components have been rendered to DOM</li>
+                        <li>Not perform,http req</li>
+                    </ul>
+                </span>
+            </li>
+            <li>
+                getSnapshotBeforeUpdate :- (rarely used)
+                <span>
+                    <ul>
+                        <li>Called right before the changes from the virtual DOM are to be reflected in the DOM.</li>
+                        <li>Capture some information from DOM.</li>
+                    </ul>
+                </span>
+            </li>
+            <li>
+                componentDidUpdate :-
+                <span>
+                    <ul>
+                        <li>Called after the render is finished in the re-render cycles.</li>
+                        <li>Cause side effects.</li>
+                    </ul>
+                </span>
+            </li>
+    </div>
+    <div>
+        <h2 style="color: blueviolet;">UNMOUNTING:- <span>When a component is being removed from the DOM.</span></h2>
+        <p>Unmounting has only one method.</p>
+        <ol type="a">
+            <li>
+                componentWillUnmount:-
+                <ul>
+                    <li>
+                        componentWillUnmount() is invoked immediately before a component is unmounted and destroyed.
+                    </li>
+                    <li> Perform any necessary cleanup in this method, such as invalidating timers, canceling network requests, or cleaning up any DOM elements that were created in componentDidMount.</li>
+                </ul>
+            </li>
+        </ol>
+    </div>
+</body>
+</html>
